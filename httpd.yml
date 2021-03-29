@@ -1,0 +1,18 @@
+---
+- name: installation of httpd
+  hosts: client01
+  tasks: 
+   - name: installing the httpd package
+     yum:
+      name: httpd
+      state: latest
+     register: logs
+   - debug: 
+       var: logs
+   - name: Starting the service
+     service: 
+      name: httpd
+      enabled: yes
+      state: started
+...
+
