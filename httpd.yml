@@ -1,6 +1,5 @@
 ---
 - name: installation of httpd
-  hosts: client01
   tasks: 
    - name: installing the httpd package
      yum:
