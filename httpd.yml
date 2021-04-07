@@ -1,6 +1,5 @@
 ---
 - name: installation of httpd
-  hosts: 10.128.0.15
   tasks: 
    - name: installing the httpd package
      yum:
